@@ -77,3 +77,33 @@ To use nodemon to start server => cmd: npm run dev
 ===========================================================================================================================================================================================================
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Version Number
+Example :  "nodemon": "^3.0.1"  
+
+#   3.0.1 = Major.Minor.Patch version
+#   Version Number is Divided in 3 parts [{3} => Major Version . {0} => Minor Version . {1} => Patch Version]
+
+Note:- Things To know
+> As we can see in the nodemon we have version number which represents the version of the package we installed.
+> As we can we we are ( ^ ) xor symbol with version number.
+
+[ ^ ] => cmd: npm update  || To update Minor version (Most Recommended)
+[ ~ ] => cmd: npm update  || To update Patch version
+[ * ] => cmd: npm update  || To update Major version (Not Recommended)
+No symbol || Which means it is static and not changeable. But We can uninstall them.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// To install, update, outdated and uninstall Version
+
+cmd: npm install  || Case: Suppose We are cloning other project, So that project have package.json file which have all the necessary information related that project, So using this will install all the necessary package used in that project
+cmd: npm install <package-name>@<version-number> || OR, if we want to install some specific dependencies with some specific version.
+  Example 1 cmd: npm install express@^4.17.1
+  Example 2 cmd: npm install express@4.17.1
+
+cmd: npm Outdated || Case : We are working on a project and we want to know what the packages are not up-to-date then using npm outdated help in to know the outdated packages we are using.
+cmd: npm update   || Case : We want to update some dependencies which have signs like [ ^ , ~ , * ] So, using npm update will automatically configure what to update of which version.
+cmd: npm uninstall || To Remove or delete dependencies.
+  Example 1 cmd: npm uninstall express
+  Example 2 cmd: npm install express@^4.17.1
+
+
