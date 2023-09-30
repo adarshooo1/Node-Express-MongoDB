@@ -1,0 +1,63 @@
+A web server is software or hardware that serves content, such as web pages, to users or other computers over the internet. It follows the client-server model, where clients (typically web browsers) request resources, and servers provide those resources.
+
+=====================================================================================================================================
+
+                    In Web Server We  have 2 things:
+
+           1. Browser                        2. Web Server
+                |                                  |
+    Ex: Chrome, Safari, Firefox            Ex: Google, Youtube
+
+
+When ever communication is happening between the browser and web server, then it is called 2 way communication.
+which is denoted form (req , res) => Request made by Client through Browser & Response get from Web Server through their databases.
+
+         Client => Request Maker (req) || Web Server => Response Teller (res)
+
+=============================================================================================================================================
+How Request is Made:
+
+# Handle HTTP Requests:
+  Web servers primarily handle Hypertext Transfer Protocol (HTTP) requests. When a user or client sends an HTTP request (for example, by entering
+  a URL in a web browser), the web server processes the request and returns the appropriate response.
+
+ => What These request looks Like:
+
+            1: Request Line:
+            > POST/login  || Type of Request => Get, put , post , patch and Delete. In Simple words : Create , read , update and Delete
+            
+            2: Headers:
+            > User Agent : Chrome / Safari (AcerSwift3: Intel Windows i5 12gen) Microsoft/11 Chrome/109.0.0.0 google/576.36
+            > Accept-Content : text/html 
+            > Language : en-us
+            > Cookies : aofanjnf23r9fadfn93njfanw3fakjnjdnf (Generated when we create something new or login sessions) 
+
+            3: Body:
+            > Username : Adarsh Singh
+            > Password : asdnjasa$@123
+------------------------------------------------------------------------------------------------------------------------
+=> How Response we get:
+
+            1: Status Line:
+            > 200 "OK" || 301 "Redirection" || 400 "Client Error" || 500 "Server Error" || 100 "Continue"
+            
+            2: Headers:
+            > Server : Express
+            > Content-type : text/html 
+            > Content-Length : 100000
+            > Expires : Sun, 30 Oct 2023
+
+            3: Body:
+            > <html><head>..........
+            > </html>
+
+=============================================================================================================================================  
+
+
+
+
+
+ 
+
+
+     
