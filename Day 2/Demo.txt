@@ -1,1 +1,0 @@
-This is the demo file which is used for codes so that they can read, write upadte and many other, things we do. 

@@ -1,0 +1,79 @@
+// To initialize package.json:
+cmd: npm init -y (to use as default setting)
+cmd: npm init (to set up new with custom details and naming)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// To install Package:
+cmd: npm i <PackageName>
+
+Example 1:- npm install express  [This will comes under dependencies in package.json file]
+
+===========================================================================================================================================================================================================
+package.json
+
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "Node.js Learning",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Adarsh Singh",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarshooo1/Node-Express-MongoDB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adarshooo1/Node-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/adarshooo1/Node-Express-MongoDB#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+===========================================================================================================================================================================================================
+
+Example 2 :- npm i nodemon --save-dev   [this will help nodemon to save as a development dependencies which is use for development as this help to refresh and restart when we save the file automatically]
+
+===========================================================================================================================================================================================================
+package.json
+
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "Node.js Learning",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"                 //Add this to use node as default to start the server.
+    "dev" : "nodemon index.js"               //Add this script after installation of nodemon as a devDependencies to start a server.
+  },
+  "author": "Adarsh Singh",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarshooo1/Node-Express-MongoDB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adarshooo1/Node-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/adarshooo1/Node-Express-MongoDB#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1" 
+  }
+}
+===========================================================================================================================================================================================================
+
+To use node to start server => cmd: npm run start
+To use nodemon to start server => cmd: npm run dev
+
+===========================================================================================================================================================================================================
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
