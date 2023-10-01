@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon 7b-NodeServer.js"
+    "dev": "nodemon 8d-NodeServerEndpoints.js"
   },
   "author": "Adarsh Singh",
   "license": "ISC",
