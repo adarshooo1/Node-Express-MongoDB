@@ -1,0 +1,28 @@
+What is Request?
+When a client or a user operate browser like chrome, and want to know about something then we write some prompt on then browser which is called request.
+
+==================================================================================================================================================================
+
+Types of Request:
+1: Get => Read
+2: post => Create
+3: Put => Update or Create
+4: patch => Partial Update
+5: Delete => Delete
+
+==================================================================================================================================================================
+
+What is Response?
+When user request something from browser then browser fetch data from the backend server and shows the result to the user that is called Response.
+
+==================================================================================================================================================================
+
+Difference Between Node and Express
+
+# Node.js: Node.js is a runtime environment that allows you to execute JavaScript on the server side.
+  It provides the basic infrastructure for building server-side applications but lacks a built-in framework
+  for handling web-related tasks.
+
+# Express: Express is a web application framework built on top of Node.js. It simplifies and streamlines
+  the process of building web applications by providing a set of features and tools for handling routing, middleware,
+  templates, and more.  

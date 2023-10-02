@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon 8d-NodeServerEndpoints.js"
+    "dev": "nodemon 10-Express.js"
   },
   "author": "Adarsh Singh",
   "license": "ISC",
@@ -18,9 +18,6 @@
     "url": "https://github.com/adarshooo1/Node-Express-MongoDB/issues"
   },
   "homepage": "https://github.com/adarshooo1/Node-Express-MongoDB#readme",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
