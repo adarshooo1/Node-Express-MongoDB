@@ -3,7 +3,7 @@ const express = require("express"); //Require Express
 
 const server = express(); //Server Created
 
-//Basic Middleware
+//Custom Middleware
 server.use((req, res, next) => {
   console.log(
     req.method, //GET

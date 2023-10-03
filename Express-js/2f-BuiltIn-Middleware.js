@@ -10,7 +10,7 @@ server.use(express.urlencoded()); // We use it when we sending data through form
 // Type 3:
 server.use(express.static("public")); // For static hosting of index.html in public directory. Generally there are , icons which should to show at very first when we load a website.
 
-// Basic Middleware used as logger to get user info.
+// Custom Middleware used as logger to get user info.
 server.use((req, res, next) => {
   console.log(
     req.method,

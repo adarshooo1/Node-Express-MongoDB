@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 
-// Basic Middleware: Logger for user info
+// Custom Middleware: Logger for user info
 server.use((req, res, next) => {
   // Log basic request information
   console.log(
