@@ -1,0 +1,71 @@
+Middleware in Express.js is a series of functions or methods that have
+access to the request (req) and response (res) objects in an Express
+application's request-response cycle. Middleware functions can perform
+various tasks, modify the request or response objects, end the
+request-response cycle, or call the next middleware function in the
+stack.
+
+Each middleware function receives the req, res, and next parameters.
+The next parameter is a function that, when invoked, passes control to
+the next middleware function in the stack.
+
+Basic Example:
+-------------------------------------------------------------------------------a
+    const express = require('express');
+    const app = express();
+
+    // Middleware function
+    const logger = (req, res, next) => {
+    console.log(`Request received at ${new Date()}`);
+    next(); // Call the next middleware in the stack
+    };
+
+    // Use the middleware
+    app.use(logger);
+
+    // Route handler
+    app.get('/', (req, res) => {
+    res.send('Hello, World!');
+    });
+
+    const port = 3000;
+    app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+    });
+-----------------------------------------------------------------------------
+In this example, the logger middleware function logs the timestamp of each
+incoming request. The app.use(logger) line tells Express to use this middleware
+for every incoming request.
+
+Middleware can be applied globally to all routes or to specific routes.
+You can use the app.use() method to apply middleware globally, and you
+can specify middleware for specific routes using the middleware as a
+parameter in the route handler.
+
+Here's an example of using middleware for a specific route:
+-----------------------------------------------------------------------------
+const express = require('express');
+const app = express();
+
+// Middleware function
+const authenticate = (req, res, next) => {
+  // Check if the user is authenticated
+  if (req.isAuthenticated()) {
+    next(); // Call the next middleware in the stack
+  } else {
+    res.status(401).send('Unauthorized');
+  }
+};
+
+// Route handler with middleware
+app.get('/secure', authenticate, (req, res) => {
+  res.send('This is a secure route.');
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+-----------------------------------------------------------------------------
+In this example, the authenticate middleware is applied only to the /secure route,
+ensuring that only authenticated users can access that route.
