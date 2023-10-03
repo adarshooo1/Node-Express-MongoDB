@@ -16,11 +16,14 @@ server.use((req, res, next) => {
 // Auth Middleware
 const auth = (req, res, next) => {
   console.log(req.query); // { password: '123' }
-  // (not recommended but just taken for this example, because writing password as a url-string might, will be visible to other, that can be dangerous.)
+
+  // (not recommended) But just taken for this example, because writing password as a url-string might, will be visible to other, that can be dangerous.
   if (req.query.password == "123") {
     //Query should be like this to bypass this auth middleware => http://localhost:8080?password=123
     next();
-  } else {
+  }
+
+  else {
     res.sendStatus(401);
   }
 };
