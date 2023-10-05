@@ -1,0 +1,85 @@
+MVC stands for Model-View-Controller, and it's a software architectural pattern
+commonly used in the development of web applications. The main idea behind MVC
+is to separate the concerns of an application into three major components:
+
+1. Model (M):
+    The Model represents the application's data and business logic.
+    It is responsible for managing and processing the data, as well
+    as the rules and behaviors of the application.
+
+2. View (V):
+    The View is responsible for presenting the data to the user and receiving user input.
+    It is the user interface (UI) that users interact with. Views display information
+    from the Model and send user actions (such as clicks or inputs) to the Controller.
+
+3. Controller (C):
+    The Controller acts as an intermediary between the Model and the View.
+    It receives user input from the View, processes that input (possibly by
+    updating the Model), and updates the View accordingly. It manages the flow of data
+    between the Model and the View.
+
+
+
+The key principles of MVC are:
+
+> Separation of Concerns: Each component (Model, View, Controller) has a distinct
+role and responsibility, which makes the code more modular and maintainable.
+
+> Scalability: Because of the separation of concerns, it is easier to scale and
+modify different parts of the application independently.
+
+> Reusability: Components can be reused in different parts of the application or even
+in different applications, promoting code reusability.
+
+> Testability: Each component can be tested independently, making it easier to identify
+and fix issues.
+
+MVC is commonly used in web development frameworks like Ruby on Rails, Django,
+and Laravel, but the principles of MVC can be applied in various types of software development.
+
+
+In an Express.js application, the directory and code structure often follow a common convention
+to organize different components and modules. Here's a typical directory structure
+for an Express.js application:
+
+/project-root (or) model-view-controller
+    ├── /node_modules      # Node.js modules installed via npm
+    ├── /public            # Static files (stylesheets, images, etc.)
+    ├── /views             # Views (templates for rendering HTML)
+    ├── /routes            # Route handlers (controllers)
+    ├── /models            # Data models
+    ├── /controllers       # Controller logic
+    ├── /middlewares       # Custom middleware functions
+    ├── /config            # Configuration files
+    ├── /utils             # Utility functions
+    ├── /tests             # Unit and integration tests
+    ├── app.js             # Main application file
+    ├── package.json       # Node.js package configuration
+    ├── package-lock.json  # Dependency lock file
+
+  Explanation of key directories and files:
+
+/public: Contains static assets such as stylesheets, images, and client-side JavaScript files.
+
+/views: Holds template files (usually in a templating engine like EJS, Pug, or Handlebars) for rendering HTML.
+
+/routes: Contains route handlers or controllers. Each file may handle routes for a specific resource or feature.
+
+/models: Houses data models that represent entities in the application. These models interact with a database or other data source.
+
+/controllers: Contains controller logic that handles business logic and orchestrates interactions between models and views.
+
+/middlewares: Includes custom middleware functions. Middleware functions can perform tasks such as authentication, logging, etc.
+
+/config: Holds configuration files for different environments (development, production, etc.).
+
+/utils: Contains utility functions or helper modules used across the application.
+
+/tests: Includes unit tests and integration tests for different parts of the application.
+
+app.js: The main application file where you configure and start the Express.js application.
+
+package.json and package-lock.json: Files that manage project dependencies and configurations.
+
+This structure provides a clear separation of concerns and makes it easier to maintain and scale the application.
+Keep in mind that the structure may be adapted based on project size, complexity, and specific requirements.
