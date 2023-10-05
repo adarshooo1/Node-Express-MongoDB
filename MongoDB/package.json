@@ -1,0 +1,23 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB is a NoSQL, document-oriented database that stores data in flexible JSON-like documents. It's schema-less, scalable, and widely used for its flexibility in handling diverse data types and large volumes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon 3-RestAPI.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarshooo1/Node-Express-MongoDB.git"
+  },
+  "author": "Adarsh Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adarshooo1/Node-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/adarshooo1/Node-Express-MongoDB#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

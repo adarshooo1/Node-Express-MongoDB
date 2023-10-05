@@ -1,0 +1,110 @@
+MongoDB is a popular, open-source NoSQL database management system that provides
+a flexible, scalable, and high-performance solution for handling large volumes
+of unstructured or semi-structured data. It falls under the category of
+document-oriented databases.
+
+Here are some key features and concepts associated with MongoDB:
+
+1. Document-Oriented: MongoDB stores data in flexible, JSON-like BSON (Binary JSON) documents.
+   These documents can have nested structures, making it easy to represent complex data.
+
+2. NoSQL: MongoDB is a NoSQL database, meaning it doesn't use the traditional relational
+   database tables with rows and columns. Instead, it uses collections and documents.
+
+3. Schema-less: Unlike traditional relational databases, MongoDB is schema-less.
+   This means you can insert records without first defining the structure,
+   and each document in a collection can have a different structure.
+
+4. Scalability: MongoDB is designed to scale horizontally across multiple servers or nodes.
+   It supports sharding, which is the process of distributing data across different machines
+   to improve performance and handle larger amounts of data.
+
+5. Indexes: MongoDB supports the use of indexes, making queries more efficient. Indexes can
+   be created on any field in a document.
+
+6. Query Language: MongoDB uses a rich query language that supports a wide range of queries,
+   including field queries, range queries, and regular expressions.
+
+7. Aggregation Framework: MongoDB provides a powerful aggregation framework for performing
+   data transformation and analysis on the data stored in the database.
+
+8. Ad Hoc Queries: Users can query the database using JavaScript-style syntax. This allows
+   for flexible and dynamic queries.
+
+9. Geospatial Indexing: MongoDB supports geospatial indexing and queries, making it suitable
+   for applications that involve location-based data.
+
+MongoDB is commonly used in web development, content management systems, real-time applications,
+and other scenarios where flexibility, scalability, and performance are essential.
+It's one of the most popular databases in the NoSQL category.
+
+==========================================================================================================================
+# Work flow
+
+DB Server   =====>   Database ====> Collection
+
+DB Server   =====>   Database ====> Collection (Student , Course , Teachers)
+
+- We have DB Server then Database then Collection, In collection we have, Suppose: (Student, Teacher, Course)
+---------------------------------------------------------
+|Example 1:
+|- Now Collection Student have Documents:
+| In Bson Format , But similar like Json.
+|
+|  Ex: {     ObjectId : "aldJq21ijf2nal3r4" (Primary Key)
+|            name : "Adarsh",
+|            age: 30,
+|            course : "BBA",
+|       }
+|
+|Example 2:
+|- Now Collection Subject have Documents:
+| In Bson Format , But similar like Json.
+|
+|  Ex: {     ObjectId : "aldJq2ad3jf2nal3r4" (Primary Key)
+|            name : "BBA",
+|            courseId : "BBA101",
+|       }       
+-----------------------------------------------------------   
+
+Comparison between SQL & No-Sql Database.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Feature           |	SQL (Relational)	                                |   NoSQL (Non-relational)                                   |
+| Data Structure    | 	Tables with predefined schema                    	|   Dynamic schema, JSON-like objects                        |
+| Scalability	    |   Vertical (adding more power to existing servers)	|   Horizontal (adding more servers to a distributed system) |
+| Query Language    |	SQL (Structured Query Language)	                    |   Varies (not limited to SQL)                              |
+| Schema            |	Strict, predefined schema	                        |   Flexible or schema-less                                  |
+| Relationships     |	Supports complex relationships	                    |   Generally not used, denormalization is common            |
+| Scaling	        |   Can be difficult to scale horizontally	            |   Easily scalable horizontally                             |
+| Examples	        |   MySQL, PostgreSQL, Oracle	                        |   MongoDB, Cassandra, Couchbase                            |
+------------------------------------------------------------------------------------------------------------------------------------------
+
+==========================================================================================================================================
+
+MongoDB Installation.
+
+1.Download with this link
+  url : https://www.mongodb.com/try/download/community  (local database server)
+
+2.After Download setup on your computer with all the default ex: C:/user/name/program files/mongodb
+
+3.Follow the path then after path:-  C:/user/name/Program Files/mongodb/server/7.0/bin (copy path according to the installation path, till bin not found)
+
+4.Open Search, Go To -> Edit environment variables for your account -> Environment Variables -> System Variable -> Select Path In System Variable -> Edit -> New -> Paste: C:/User/Adarsh Singh/Program Files/mongodb/server/7.0/bin  (My PC Path) -> Ok -> OK -> Ok (DONE).
+
+5.Create a data directory in C:/ drive (Do Not Disturb) => Inside data Directory make => db directory. (exit)
+
+6.If we can run { cmd: mongod } in system through error and exit. And Server should not to stop or exit.
+
+7.Now run cmd: {mongod --dbpath c:/data/db} or Absolute or Relative path. (If problem exist then go to helpful links)
+
+8.Now server will started in the local mongodb compass api which e have downloaded.
+
+9.connect with default url : mongodb://localhost:27017
+
+
+Helpful links:
+Installation: https://youtu.be/gB6WLkSrtJk?si=HE0s75w_yNKsHX2h
+Mongodb and Mongo-dump database tool: https://youtu.be/qcGYBsdOc8I?si=jszesTl1MilfWmso (Important, If we export Binary data from mongodb Compass to mongodb Atlas => local to remote data transfer)
+Coder-Dost Tutorial: https://youtu.be/ChVE-JbtYbM?si=j28mqRnuIfhHd_lR  (Start from chapter 6)
+
