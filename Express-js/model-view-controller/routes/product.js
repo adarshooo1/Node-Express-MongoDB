@@ -8,7 +8,7 @@ const {
   replaceProduct,
   updateProduct,
   deleteProduct,
-} = require("../controller/product.js");
+} = require("../controller/product");
 
 // Create an instance of Express Router.
 const router = express.Router();

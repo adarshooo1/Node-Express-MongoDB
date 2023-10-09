@@ -5,6 +5,7 @@ const morgan = require("morgan");
 // Import Routes from the routes directory.
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/users");
+const mongoose = require('mongoose');
 
 // Create an instance of the Express server.
 const server = express();
@@ -17,6 +18,14 @@ server.use(morgan("dev"));
 
 // Built-In Middleware for parsing JSON request bodies.
 server.use(express.json());
+
+//Database connection with mongoose.
+main().catch(err => console.log(err)); //If problem persist while connecting the database throw error.
+
+async function main(){
+  await mongoose.connect("mongodb://127.0.0.1:27017/store")
+  console.log("Database Connected Successfully !") //If database connected successfully.
+}
 
 // Route Middleware: Mount the productRouter under the "/api" path. Ex: http:localhost:1010/api/products |or| /api/products/2
 server.use("/products", productRouter.router);
