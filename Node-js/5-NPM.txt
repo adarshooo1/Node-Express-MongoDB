@@ -80,8 +80,8 @@ To use nodemon to start server => cmd: npm run dev
 // Version Number
 Example :  "nodemon": "^3.0.1"  
 
-#   3.0.1 = Major.Minor.Patch version
-#   Version Number is Divided in 3 parts [{3} => Major Version . {0} => Minor Version . {1} => Patch Version]
+#   ^3.0.1 = Major.Minor.Patch version
+#   Version Number is Divided in 3 parts [{^3} => Major Version . {0} => Minor Version . {1} => Patch Version]
 
 Note:- Things To know
 > As we can see in the nodemon we have version number which represents the version of the package we installed.

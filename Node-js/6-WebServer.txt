@@ -52,6 +52,17 @@ How Request is Made:
             > </html>
 
 =============================================================================================================================================  
+What is Happening when we make request? Ex: https.google.com 
+
+1.DNS => Browser need to find IP Address connected with the particular Domain name.
+2.TCP => Then TCP make handshake with IP address obtained from BDN
+3.HTTP Request => After setting a reliable connection a browser makes a http request to google.com
+4.Server Processing => Google's server receives the HTTP request and processes it. In the case of a simple request for the homepage, the server fetches the HTML content.
+5.HTTP Response => The server sends back an HTTP response containing the requested HTML content. Response Include : Headers, content, status code etc.
+6.Rendering => Browser receive html in response then, It parses the HTML, processes stylesheets (CSS), executes JavaScript, and loads additional resources like images and other assets.
+7.Display Content => The browser displays the fully-rendered webpage on your screen.
+8. Connection Closure => The TCP connection is closed, and your browser may keep the rendered content in its cache for a certain period, depending on caching headers received from the server.
+
 
 
 

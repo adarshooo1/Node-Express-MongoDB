@@ -1,17 +1,19 @@
-require("dotenv").config() //Require .env, So that we can use.
+require("dotenv").config(); //Require .env, So that we can use.
 const express = require("express");
 const morgan = require("morgan");
 
 // Import Routes from the routes directory.
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/users");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 // Create an instance of the Express server.
 const server = express();
 
+server.use(cors());
 // Built-In Middleware
-server.use(express.static(process.env.VIEW_DIR)); //Accessing view directory from env package 
+server.use(express.static(process.env.VIEW_DIR)); //Accessing view directory from env package
 
 // Third-Party Middleware (Morgan for logging).
 server.use(morgan("dev"));
@@ -20,16 +22,16 @@ server.use(morgan("dev"));
 server.use(express.json());
 
 //Database connection with mongoose.
-main().catch(err => console.log(err)); //If problem persist while connecting the database throw error.
+main().catch((err) => console.log(err)); //If problem persist while connecting the database throw error.
 
-async function main(){
-  await mongoose.connect("mongodb://127.0.0.1:27017/store")
-  console.log("Database Connected Successfully !") //If database connected successfully.
+async function main() {
+  await mongoose.connect("mongodb://127.0.0.1:27017/store");
+  console.log("Database Connected Successfully !"); //If database connected successfully.
 }
 
 // Route Middleware: Mount the productRouter under the "/api" path. Ex: http:localhost:1010/api/products |or| /api/products/2
 server.use("/products", productRouter.router);
-server.use("/users", userRouter.router);
+// server.use("/users", userRouter.router);
 
 // Start the server on port 1010.
 server.listen(process.env.PORT, () => {

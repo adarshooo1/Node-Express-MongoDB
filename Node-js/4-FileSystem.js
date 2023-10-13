@@ -4,7 +4,7 @@
 const fs = require("fs");
 
 // Way 1:
-// (Not - Recommended) Synchronous action pressurize server to run this specific task and letting other task in queue, which is blacking the server.
+// (Not - Recommended) Synchronous action pressurize server to run this specific task and letting other task in queue, which is blocking the server.
 const txt2 = fs.readFileSync("Node-js/4b-FileSystem.txt", "utf-8"); //When ever we are trying to read a file we most use the directory name with the text file we want to read.
 console.log(txt2);
 

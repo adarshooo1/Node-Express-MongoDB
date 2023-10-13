@@ -69,12 +69,12 @@ DB Server   =====>   Database ====> Collection (Student , Course , Teachers)
 
 Comparison between SQL & No-Sql Database.
 ------------------------------------------------------------------------------------------------------------------------------------------
-| Feature           |	SQL (Relational)	                                |   NoSQL (Non-relational)                                   |
+| Feature           |	SQL (Relational)	                                 |   NoSQL (Non-relational)                                   |
 | Data Structure    | 	Tables with predefined schema                    	|   Dynamic schema, JSON-like objects                        |
-| Scalability	    |   Vertical (adding more power to existing servers)	|   Horizontal (adding more servers to a distributed system) |
-| Query Language    |	SQL (Structured Query Language)	                    |   Varies (not limited to SQL)                              |
+| Scalability	     |   Vertical (adding more power to existing servers)	|   Horizontal (adding more servers to a distributed system) |
+| Query Language    |	SQL (Structured Query Language)	                  |   Varies (not limited to SQL)                              |
 | Schema            |	Strict, predefined schema	                        |   Flexible or schema-less                                  |
-| Relationships     |	Supports complex relationships	                    |   Generally not used, denormalization is common            |
+| Relationships     |	Supports complex relationships	                  |   Generally not used, denormalization is common            |
 | Scaling	        |   Can be difficult to scale horizontally	            |   Easily scalable horizontally                             |
 | Examples	        |   MySQL, PostgreSQL, Oracle	                        |   MongoDB, Cassandra, Couchbase                            |
 ------------------------------------------------------------------------------------------------------------------------------------------
